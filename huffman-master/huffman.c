@@ -1,27 +1,13 @@
-/* Copyright 2016 Gagarine Yaikhom (MIT License) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <mpi.h>
 
 
-/*
-
-Read in the data, scatter it to each rank. 
-have each rank build a huffman tree and encode their part of the data. 
-Put a barrier up to stop anyone from progressing until all ranks are done
-don't bother combining since i don't care about timing that
-have each rank decode their part of the array using their previously constructed tree
-barrier
-combine all the pieces together using gather
-
-*/
-
-
-#define inputSize 800
-#define MAX_INPUT_SIZE 32768
-#define MAX_CODE_SIZE 32768
-#define MAX_BUFFER_SIZE 256
+#define inputSize 65536
+#define MAX_INPUT_SIZE 65536
+#define MAX_CODE_SIZE 131072
+#define MAX_BUFFER_SIZE 65536
 #define INVALID_BIT_READ -1
 #define INVALID_BIT_WRITE -1
 
@@ -197,9 +183,8 @@ int encode(const char* ifile) {
     // Scatter the input to the different MPI ranks
     // MPI_Scatter(bin1, bits/size, MPI_INT, binA, bits/size, MPI_INT, 0, MPI_COMM_WORLD);
     MPI_Barrier(MPI_COMM_WORLD);
-    MPI_Scatter(input, inputSize/size, MPI_CHAR, localInput, inputSize/size+1, MPI_CHAR, 0, MPI_COMM_WORLD);
+    MPI_Scatter(input, inputSize/size, MPI_CHAR, localInput, inputSize/size, MPI_CHAR, 0, MPI_COMM_WORLD);
     determine_frequency();
-
     int c;
     for (c = 0; c < num_alphabets; ++c) {
         if (frequency[c] > 0) {
@@ -214,7 +199,6 @@ int encode(const char* ifile) {
     for (c = 0; c < inputSize/size; c++) {
         encode_alphabet((int) localInput[c]);
     }
-
     flush_buffer();
     free(stack);
     return 0;
@@ -278,8 +262,7 @@ int write_bit(int bit) {
 
 int flush_buffer() {
     if (bits_in_buffer) {
-        memcpy(coded+codedPos, buffer, (((bits_in_buffer + 7) >> 3) * 8));
-        codedPos+= (((bits_in_buffer + 7) >> 3)*8)*8;
+        memcpy(coded+codedPos, buffer, (((bits_in_buffer + 7) >> 3)));
         bits_in_buffer = 0;
         codedBits+= codedBits%8;
     }
@@ -333,13 +316,15 @@ int main(int argc, char **argv) {
     MPI_Barrier(MPI_COMM_WORLD);
     
     if (rank == 0) {
+        FILE* fout = fopen(argv[2], "w");
         for (int i = 0; i < inputSize; i++) {
             if (output[i] != '\0') { // There can be extra null characters tacked onto the end of the localOutputs and I don't want to figure out a better way to get rid of them
-               printf("%c", output[i]);
+               //printf("%c", output[i]);
+               fputc(output[i], fout);
             }
         }
-        printf("\n");
         printf("Encoding Time: %f\nDecoding Time: %f\n", encodeTime, decodeTime);
+        fclose(fout);
     }
     
     finalise();
