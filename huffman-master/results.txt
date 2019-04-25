@@ -1,0 +1,194 @@
+# 1 nodes 1 ranks
+Encoding Time: 0.095453
+Decoding Time: 0.039051
+
+# 1 nodes 2 ranks
+Encoding Time: 0.069429
+Decoding Time: 0.023533
+# 2 nodes 2 ranks
+Encoding Time: 0.069156
+Decoding Time: 0.023580
+# 4 nodes 2 ranks
+Encoding Time: 0.077977
+Decoding Time: 0.023579
+# 8 nodes 2 ranks
+Encoding Time: 0.069147
+Decoding Time: 0.023580
+# 16 nodes 2 ranks
+Encoding Time: 0.075240
+Decoding Time: 0.023580
+# 32 nodes 2 ranks
+Encoding Time: 0.072500
+Decoding Time: 0.023579
+# 64 nodes 2 ranks
+Encoding Time: 0.069366
+Decoding Time: 0.023580
+# 128 nodes 2 ranks
+Encoding Time: 0.072357
+Decoding Time: 0.023580
+
+# 1 nodes 4 ranks
+Encoding Time: 0.054642
+Decoding Time: 0.011851
+# 2 nodes 4 ranks
+Encoding Time: 0.054064
+Decoding Time: 0.011886
+# 4 nodes 4 ranks
+Encoding Time: 0.054269
+Decoding Time: 0.011877
+# 8 nodes 4 ranks
+Encoding Time: 0.054281
+Decoding Time: 0.011878
+# 16 nodes 4 ranks
+Encoding Time: 0.054247
+Decoding Time: 0.011877
+# 32 nodes 4 ranks
+Encoding Time: 0.054359
+Decoding Time: 0.011877
+# 64 nodes 4 ranks
+Encoding Time: 0.054026
+Decoding Time: 0.011877
+# 128 nodes 4 ranks
+Encoding Time: 0.057151
+Decoding Time: 0.011878
+
+# 1 nodes 8 ranks
+Encoding Time: 0.046845
+Decoding Time: 0.006034
+# 2 nodes 8 ranks
+Encoding Time: 0.051849
+Decoding Time: 0.006061
+# 4 nodes 8 ranks
+Encoding Time: 0.051849
+Decoding Time: 0.006061
+# 8 nodes 8 ranks
+Encoding Time: 0.046216
+Decoding Time: 0.006071
+# 16 nodes 8 ranks
+Encoding Time: 0.051124
+Decoding Time: 0.006069
+# 32 nodes 8 ranks
+Encoding Time: 0.046261
+Decoding Time: 0.006069
+# 64 nodes 8 ranks
+Encoding Time: 0.046196
+Decoding Time: 0.006070
+# 128 nodes 8 ranks
+Encoding Time: 0.045972
+Decoding Time: 0.006070
+
+# 1 nodes 16 ranks
+Encoding Time: 0.042822
+Decoding Time: 0.003143
+# 2 nodes 16 ranks
+Encoding Time: 0.042805
+Decoding Time: 0.003190
+# 4 nodes 16 ranks
+Encoding Time: 0.048285
+Decoding Time: 0.003159
+# 8 nodes 16 ranks
+Encoding Time: 0.042294
+Decoding Time: 0.003194
+# 16 nodes 16 ranks
+Encoding Time: 0.042122
+Decoding Time: 0.003205
+# 32 nodes 16 ranks
+Encoding Time: 0.042180
+Decoding Time: 0.003205
+# 64 nodes 16 ranks
+Encoding Time: 0.042374
+Decoding Time: 0.003206
+# 128 nodes 16 ranks
+Encoding Time: 0.045252
+Decoding Time: 0.003205
+
+# 1 nodes 32 ranks
+Encoding Time: 0.048076
+Decoding Time: 0.001832
+# 2 nodes 32 ranks
+Encoding Time: 0.048076
+Decoding Time: 0.001832
+# 4 nodes 32 ranks
+Encoding Time: 0.042129
+Decoding Time: 0.001748
+# 8 nodes 32 ranks
+Encoding Time: 0.040753
+Decoding Time: 0.001736
+# 16 nodes 32 ranks
+Encoding Time: 0.040276
+Decoding Time: 0.001799
+# 32 nodes 32 ranks
+Encoding Time: 0.041025
+Decoding Time: 0.002020
+# 64 nodes 32 ranks
+Encoding Time: 0.040711
+Decoding Time: 0.002020
+# 128 nodes 32 ranks
+Encoding Time: 0.040973
+Decoding Time: 0.002021
+
+# 1 nodes 64 ranks
+Encoding Time: 0.095453
+Decoding Time: 0.039051
+# 2 nodes 64 ranks
+Encoding Time: 0.044824
+Decoding Time: 0.001148
+# 4 nodes 64 ranks
+Encoding Time: 0.040383
+Decoding Time: 0.001059
+# 8 nodes 64 ranks
+Encoding Time: 0.040049
+Decoding Time: 0.001064
+# 16 nodes 64 ranks
+Encoding Time: 0.042464
+Decoding Time: 0.001058
+# 32 nodes 64 ranks
+Encoding Time: 0.042336
+Decoding Time: 0.001124
+# 64 nodes 64 rank
+Encoding Time: 0.042731
+Decoding Time: 0.001174
+# 128 nodes 64 ranks
+Encoding Time: 0.039468
+Decoding Time: 0.001174
+
+# 2 nodes 128 ranks
+Encoding Time: 0.046452
+Decoding Time: 0.000757
+# 4 nodes 128 ranks
+Encoding Time: 0.040908
+Decoding Time: 0.000542
+# 8 nodes 128 ranks
+Encoding Time: 0.045922
+Decoding Time: 0.000520
+# 16 nodes 128 ranks
+Encoding Time: 0.045826
+Decoding Time: 0.000541
+# 32 nodes 128 ranks
+Encoding Time: 0.038885
+Decoding Time: 0.000521
+# 64 nodes 128 ranks
+Encoding Time: 0.042491
+Decoding Time: 0.000516
+# 128 nodes 128 ranks
+Encoding Time: 0.047635
+Decoding Time: 0.000621
+
+# 4 nodes 256 ranks
+Encoding Time: 0.049543
+Decoding Time: 0.000520
+# 8 nodes 256 ranks
+Encoding Time: 0.040299
+Decoding Time: 0.000365
+# 16 nodes 256 ranks
+Encoding Time: 0.038889
+Decoding Time: 0.000352
+# 32 nodes 256 ranks
+Encoding Time: 0.043505
+Decoding Time: 0.000349
+# 64 nodes 256 ranks
+Encoding Time: 0.038270
+Decoding Time: 0.000348
+# 128 nodes 256 ranks
+Encoding Time: 0.038809
+Decoding Time: 0.000351
