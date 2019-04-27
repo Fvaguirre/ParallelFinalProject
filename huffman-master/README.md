@@ -1,18 +1,3 @@
-# The Huffman Coding Algorithm
-
-In this project, we implement the Huffman Coding algorithm. For
-further details, please visit my
-[homepage](http://yaikhom.com/2016/05/09/implementing-the-huffman-coding-algorithm.html), or view the NOWEB generated documentation `huffman.pdf`.
-
-##Source code
-
-This repository contains the following source code and data files:
-
-* `huffman.c` - A C programming language implementation.
-* `message.txt`- A small text message file for testing.
-* `huffman.pdf`- Documentation of the implementation.
-* `Makefile` - For compiling the source.
-
 ##Usage
 
 To run the algorithm on the supplied example data, first compile
@@ -21,7 +6,11 @@ To run the algorithm on the supplied example data, first compile
 
 and then run the program:
 
-    $ ./huffman encode message.txt encoded.dat
-    $ ./huffman decode encoded.dat decoded.txt
-    $ diff decoded.txt message.txt
+    $ ./huffman input.txt output.txt
 
+
+##Source code
+The Huffman Encoding/Decoding algorithm used was based on a serial implementation of Huffman encoding (https://github.com/gyaikhom/huffman). 
+The algorithm has been parallelized and optimized for running on the BG/Q. 
+In the interest of evaluating only the effects of parallelization on encoding and decoding input, the writing and reading of header files has been excluded 
+from this implementation and the decoding of the encoded input is based off of the huffman tree created to encode the input.  
